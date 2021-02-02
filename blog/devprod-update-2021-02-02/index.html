@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>DevProd team update for week of February 1 | Clouddot Platform Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DevProd team update for week of February 1" />
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:site" content="https://twitter.com/redhat" />
+  <meta name="twitter:creator" content="https://twitter.com/redhat" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.b60e0932fe1c50c3d7c5b4f83ee9e4592363654d0f2abf05bbd0678d5b8a214c.css" integrity="sha256-tg4JMv4cUMPXxbT4PunkWSNjZU0PKr8Fu9BnjVuKIUw="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/redhatinsights.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "DevProd team update for week of February 1",
+      "headline" : "DevProd team update for week of February 1",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-02-02 15:00:00 -0600 CST",
+      "dateModified" : "2021-02-02 15:00:00 -0600 CST",
+      "url" : "https:\/\/redhatinsights.github.io\/blog\/devprod-update-2021-02-02\/",
+      "wordCount" : "763",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">DevProd team update for week of February 1</h1>
+            <time datetime="2021-02-02 15:00:00 -0600 CST" class="post__date">2 Feb 2021</time> 
+          </header>
+          <article class="post__content">
+              
+<p>The DevProd team is launching a blog with weekly updates on migrating apps to
+Clowder and ephemeral environments!  This will include brief descriptions of
+changes and new features added to both Clowder and Bonfire, progress updates
+regarding specific app migrations, issues and warnings to be pertinent to dev
+teams, and other developments going on in the DevProd team.</p>
+<h1 id="clowder">Clowder</h1>
+<h3 id="feature-flags">Feature flags<a class="anchor" href="#feature-flags">#</a></h3>
+<p><a href="https://github.com/RedHatInsights/clowder/pull/177" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Clowder now supports</a>
+ passing connection information for an Unleash feature flag
+server in <code>cdappconfig.json</code>.  The feature only supports <code>local</code> mode at this
+time, though <code>app-interface</code> mode will be added once devs need a feature flag
+server in production.  In <code>local</code> mode, Clowder will deploy an Unleash instance
+and provide the hostname and port to the application.</p>
+<p>Apps will need to add <code>featureFlags: true</code> to their app spec to get the
+credentials.  Also make sure that your <code>ClowdEnvironment</code> has the <code>featureFlag</code>
+provider have <code>mode: local</code> to get the Unleash instance deployed.</p>
+<h3 id="shared-dbs">Shared DBs<a class="anchor" href="#shared-dbs">#</a></h3>
+<p><code>ClowdApps</code> can now <a href="https://github.com/RedHatInsights/clowder/pull/178" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>share databases</a>
+ by using the <code>sharedDbAppName</code>
+attribute in the spec:</p>
+<pre><code>metadata:
+  name: advisor-service
+spec:
+  database:
+    sharedDbAppName: advisor-api
+</code></pre>
+<h3 id="private-ports">Private ports<a class="anchor" href="#private-ports">#</a></h3>
+<p>Since many apps expose a separate endpoint for internal APIs, Clowder needed to
+<a href="https://github.com/RedHatInsights/clowder/pull/185" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>provide support</a>
+ for exposing this port.  This change touched several Clowder
+components:</p>
+<ul>
+<li>
+<p>Created a new <code>webServices</code> section in the <code>ClowdApp</code> spec, ex:</p>
+<pre><code>spec:
+  webServices:
+    public:
+      enabled: true
+    private:
+      enabled: true
+</code></pre>
+</li>
+<li>
+<p>Deprecated the <code>web</code> section in the <code>ClowdApp</code> spec in favor of the
+<code>webServices</code> section.</p>
+</li>
+<li>
+<p><code>ClowdEnvironment</code> now has a <code>spec.providers.web.privatePort</code> field to specify
+the port number used for private endpoints.</p>
+</li>
+<li>
+<p>Added <code>publicPort</code> and <code>privatePort</code> in <code>cdappconfig.json</code> in favor of
+<code>webPort</code>.</p>
+</li>
+<li>
+<p>Consequently <code>webPort</code> is now considered deprecated and apps should use
+<code>publicPort</code> instead.</p>
+</li>
+<li>
+<p>Released new versions of the Python, Go, JS app-common libs to support the
+<code>cdappconfig.json</code> changes.</p>
+</li>
+</ul>
+<h3 id="ruby-app-common-client">Ruby app-common client<a class="anchor" href="#ruby-app-common-client">#</a></h3>
+<p>Work for the app-common client for Ruby has begun.  Thanks to Hui Song and
+Madhu Kanoor for driving this effort!</p>
+<p><a href="https://github.com/RedHatInsights/app-common-ruby">https://github.com/RedHatInsights/app-common-ruby</a></p>
+<h3 id="redesigned-readme">Redesigned README<a class="anchor" href="#redesigned-readme">#</a></h3>
+<p>The Clowder <a href="https://github.com/RedHatInsights/clowder" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>README</a>
+ has been refined in the last few weeks to better provide
+what devs look for in a README: What is this thing, why do I care, and how do I
+use it?</p>
+<ul>
+<li>New images to help explain and demonstrate what Clowder does</li>
+<li>Github releases will contain a manifest that will install Clowder in a cluster</li>
+<li>Revised explanation of what Clowder is</li>
+</ul>
+<h1 id="bonfire">Bonfire</h1>
+<h3 id="deploy-frontend-via-bonfire">Deploy frontend via Bonfire<a class="anchor" href="#deploy-frontend-via-bonfire">#</a></h3>
+<p>The ability to deploy the Clouddot frontend to an ephemeral environment via
+Bonfire is nearly complete.  Details on how to deploy the frontend will be in
+the next update.</p>
+<h3 id="local-config">Local config<a class="anchor" href="#local-config">#</a></h3>
+<p>Bonfire now allows the use of a local YAML document to provide template
+configuration as an alternative to app-interface.  This should reduce the
+learning curve required to get started using Bonfire for devs trying to get
+started with ephemeral environments.  Instead of having to make local changes
+to app-interface and run a GraphQL server, all a dev needs to do is update
+<code>config.yaml</code> to configure their app.</p>
+<p>Bonfire has an <code>example_config.yaml</code> that can be used as an example for devs to
+use.  Copy <code>example_config.yaml</code> to <code>config.yaml</code> and run</p>
+<pre><code>bonfire config get -l -a &lt;app&gt;
+</code></pre>
+<p>to have bonfire produce a K8S resource that can be piped to <code>oc apply -f -</code>.</p>
+<h1 id="migrations">Migrations</h1>
+<p>While we continue to focus on deploying host-inventory and RBAC to stage and
+prod via Clowder, these apps are already available for use in ephemeral
+environments, along with these apps:</p>
+<ul>
+<li>Ingress</li>
+<li>Puptoo</li>
+<li>Storage broker</li>
+<li>Engine (insights-core)</li>
+<li>Remediations</li>
+<li>Receptor</li>
+</ul>
+<p>Work also continues on Advisor, but this is mostly focused on integrating the
+Cyndi operator with Clowder.</p>
+<h1 id="documentation">Documentation</h1>
+<p>The DevProd team is starting a focused effort to revamp our documentation on
+migration to the AppSRE build pipeline and adding support for Clowder &amp;
+ephemeral environments to your apps.  We plan to have updated documentation in
+the coming weeks!</p>
+<p>In the mean time, please check out our updated <a href="https://github.com/RedHatInsights/clowder" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>readme</a>
+ and <a href="https://redhatinsights.github.io/clowder/api_reference.html" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>API
+Reference</a>
+.</p>
+<h1 id="v3-cluster">V3 Cluster</h1>
+<p>There has been an ongoing issue with the V3 cluster where nodes would be
+periodically marked with a &ldquo;taint&rdquo; that the storage of that node was in a bad
+state. When this happens, the entire node is marked as unavailable for
+scheduling pods.  If this issue is not resolved before too many nodes get
+tainted, then the cluster starts reporting resource exhaustion, causing CI/CD
+pipelines to freeze and CI/QA environments to stop functioning.</p>
+<p>While the root cause has never been identified, a workaround has now been
+automated:  A node will be drained of pods and rebooted when a taint is first
+detected.  Previously the DevProd team has had to submit a ticket to OSD to get
+a node rebooted, so this should significantly improve the stability of the V3
+cluster.</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Twitter"
+         href="https://twitter.com/redhat"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/RedHatInsights"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/github.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
