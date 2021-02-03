@@ -68,7 +68,7 @@
       "datePublished": "2021-02-02 15:00:00 -0600 CST",
       "dateModified" : "2021-02-02 15:00:00 -0600 CST",
       "url" : "https:\/\/redhatinsights.github.io\/blog\/devprod-update-2021-02-02\/",
-      "wordCount" : "763",
+      "wordCount" : "788",
       "keywords" : ["Blog"]
     }
   
@@ -135,7 +135,9 @@ and provide the hostname and port to the application.</p>
 credentials.  Also make sure that your <code>ClowdEnvironment</code> has the <code>featureFlag</code>
 provider have <code>mode: local</code> to get the Unleash instance deployed.</p>
 <h3 id="shared-dbs">Shared DBs<a class="anchor" href="#shared-dbs">#</a></h3>
-<p><code>ClowdApps</code> can now <a href="https://github.com/RedHatInsights/clowder/pull/178" 
+<p>While the DevProd team recommends apps do not share DBs, some apps cannot
+easily re-architect to meet this recommendation.  Thus we have added the
+ability for <code>ClowdApps</code> to <a href="https://github.com/RedHatInsights/clowder/pull/178" 
   
    target="_blank" rel="noreferrer noopener" 
 >share databases</a>
