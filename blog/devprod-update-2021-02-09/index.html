@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>DevProd team update for week of February 8 | Clouddot Platform Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DevProd team update for week of February 8" />
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:site" content="https://twitter.com/redhat" />
+  <meta name="twitter:creator" content="https://twitter.com/redhat" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.b60e0932fe1c50c3d7c5b4f83ee9e4592363654d0f2abf05bbd0678d5b8a214c.css" integrity="sha256-tg4JMv4cUMPXxbT4PunkWSNjZU0PKr8Fu9BnjVuKIUw="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/redhatinsights.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "DevProd team update for week of February 8",
+      "headline" : "DevProd team update for week of February 8",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-02-09 15:00:00 -0600 CST",
+      "dateModified" : "2021-02-09 15:00:00 -0600 CST",
+      "url" : "https:\/\/redhatinsights.github.io\/blog\/devprod-update-2021-02-09\/",
+      "wordCount" : "422",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">DevProd team update for week of February 8</h1>
+            <time datetime="2021-02-09 15:00:00 -0600 CST" class="post__date">9 Feb 2021</time> 
+          </header>
+          <article class="post__content">
+              
+<p>It&rsquo;s been a busy week in the land of documentation. Clowder also recieved some
+new updates paving the way for full Cyndi support, along with some important
+technical debt cleanup. Read all the latest updates here.</p>
+<h1 id="clowder">Clowder</h1>
+<h3 id="production-updates">Production Updates<a class="anchor" href="#production-updates">#</a></h3>
+<p><a href="https://github.com/RedHatInsights/clowder/pull/178" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Shared DB support</a>
+ has now landed in production, along with support for the
+<a href="https://github.com/RedHatInsights/clowder/pull/185" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>private ports</a>
+, which adds Clowder support for internal endpoints that are
+intended to be accessed via Turnpike on internal.cloud.redhat.com.</p>
+<h3 id="documentation-updates">Documentation Updates<a class="anchor" href="#documentation-updates">#</a></h3>
+<p>New documentation for each <a href="https://clowder-operator.readthedocs.io/en/latest/providers/index.html" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Clowder provider</a>
+ has been added and is
+accessible via a Clowder-specific <a href="https://clowder-operator.readthedocs.io/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>RTD site</a>
+. The Clowder docs have also
+been added to the internal documentation page (pushed to stage, should be
+promoted to prod shortly).</p>
+<p>A brand new <em>How to Use</em> guide <a href="https://clowder-operator.readthedocs.io/en/latest/usage/index.html" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>has been created</a>
+, which explains the basics
+of ClowdApps and ClowdEnvironments and how to set up a local dev environment
+using Clowder.</p>
+<h3 id="strimzi-minikube-deployment">Strimzi Minikube deployment<a class="anchor" href="#strimzi-minikube-deployment">#</a></h3>
+<p>Since working with Cyndi will require a Strimzi deployment, a new Minikube
+<a href="https://github.com/RedHatInsights/clowder/blob/f66d1462b1c7793a4a5265957d2ba064db8033ae/build/minikube_setup.sh" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>installation script</a>
+ has been created along with initial support for
+Clowder to deploy <code>KafkaConnect</code> CRs.</p>
+<h3 id="istio-initial-work">Istio initial work<a class="anchor" href="#istio-initial-work">#</a></h3>
+<p>Work has been ongoing to deploy the core platform into an Istio Service Mesh.
+mTLS has been confirmed to work for service-to-service calls, configured
+transparently to apps.  Isolated OSD and AWS accounts for FedRAMP stage have
+been requested to be added to app-interface.  Once these resources are in
+place, the service mesh operators and apps will start to be deployed to the new
+stage environment.</p>
+<h3 id="iqe-support-for-cdappconfigjson">IQE support for cdappconfig.json<a class="anchor" href="#iqe-support-for-cdappconfigjson">#</a></h3>
+<p>An important <a href="https://gitlab.cee.redhat.com/insights-qe/iqe-core/-/merge_requests/889" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>MR</a>
+ has been merged into IQE to support loading service
+configuration from the config that Clowder generates. This will allow K8s
+<code>Jobs</code>/<code>CronJobs</code> to run IQE against a Clowder-enabled environment and receive
+the correct configuration for hostnames of services. This is how we expect to
+run IQE jobs in <code>pr_check.sh</code> once the change is released.</p>
+<h1 id="frontend-deployed-to-ephemeral-environments">Frontend deployed to ephemeral environments</h1>
+<p>If you&rsquo;re interested in deploying the frontend to an ephemeral environment, you
+can follow <a href="https://internal.cloud.redhat.com/docs/devprod/ephemeral/03-frontend/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>this guide</a>
+ to use Bonfire to get it set up.  Be sure to follow
+the <a href="https://internal.cloud.redhat.com/docs/devprod/ephemeral/01-onboarding/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>Bonfire getting started guide</a>
+ before trying to deploy the frontend.</p>
+<h1 id="legacy-documentation">Legacy Documentation</h1>
+<p>We&rsquo;re moving away from using the old <a href="https://platform-docs.cloud.paas.psi.redhat.com/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>platform docs</a>
+ URL as a frontend to
+our documentation and instead have migrated over to
+<a href="https://internal.cloud.redhat.com/docs/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>internal.cloud.redhat.com</a>
+. Though this will remain active for a short
+while longer, it is planned to be be decommissioned soon. For this reason, we
+migrated all the content at the old location to live under &lsquo;Legacy docs&rsquo; in the
+new location.  This is in stage already and will be deployed to prod soon.</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://redhatinsights.github.io/blog/devprod-update-2021-02-02/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">DevProd team update for week of February 1</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Twitter"
+         href="https://twitter.com/redhat"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/RedHatInsights"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/github.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
