@@ -14,7 +14,7 @@
       <pubDate>Tue, 09 Feb 2021 15:00:00 -0600</pubDate>
       
       <guid>https://redhatinsights.github.io/blog/devprod-update-2021-02-09/</guid>
-      <description>It&amp;rsquo;s been a busy week in the land of documentation. Clowder also recieved some new updates paving the way for full Cyndi support, along with some important technical debt cleanup. Read all the latest updates here.
+      <description>It&amp;rsquo;s been a busy week in the land of documentation. Clowder also received some new updates paving the way for full Cyndi support, along with some important technical debt cleanup. Read all the latest updates here.
 Clowder Production Updates Shared DB support has now landed in production, along with support for the private ports , which adds Clowder support for internal endpoints that are intended to be accessed via Turnpike on internal.</description>
     </item>
     

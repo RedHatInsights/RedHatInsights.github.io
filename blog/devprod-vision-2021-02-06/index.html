@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Developer Productivity Team - Core Vision | Clouddot Platform Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Developer Productivity Team - Core Vision" />
+  <meta name="twitter:description" content=""/>
+  <meta name="twitter:site" content="https://twitter.com/redhat" />
+  <meta name="twitter:creator" content="https://twitter.com/redhat" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.b60e0932fe1c50c3d7c5b4f83ee9e4592363654d0f2abf05bbd0678d5b8a214c.css" integrity="sha256-tg4JMv4cUMPXxbT4PunkWSNjZU0PKr8Fu9BnjVuKIUw="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/redhatinsights.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Developer Productivity Team - Core Vision",
+      "headline" : "Developer Productivity Team - Core Vision",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-02-11 15:00:00 -0600 CST",
+      "dateModified" : "2021-02-11 15:00:00 -0600 CST",
+      "url" : "https:\/\/redhatinsights.github.io\/blog\/devprod-vision-2021-02-06\/",
+      "wordCount" : "969",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Developer Productivity Team - Core Vision</h1>
+            <time datetime="2021-02-11 15:00:00 -0600 CST" class="post__date">11 Feb 2021</time> 
+          </header>
+          <article class="post__content">
+              
+<p>It’s important in a large ecosystem such as the Clouddot platform to understand
+all the moving parts, the teams involved, and their functions and driving
+forces. This can often help alleviate stresses and tensions by providing the
+context to teams decisions, ultimately revealing their core motiviations. In
+this blog post, the intention is to furnish the reader with an overview of the
+pillars that the Developer Productivity (DevProd) team is built on and how some
+of the projects they maintain and operate fit into the broader Clouddot
+ecosystem.</p>
+<p>The DevProd team’s chief concern is to improve developer productivity by
+accelerating the delivery of features/business value. There are multiple facets
+to this, but broadly speaking the DevProd team focuses on three major areas:</p>
+<ul>
+<li>Reducing the steep learning curve developers navigate when onboarding to the
+platform, e.g. learning Istio service mesh configuration, or understanding
+pod affinity rules.</li>
+<li>Improving developers' experience of operating inside a kubernetes-based
+platform such as Clouddot, e.g. debugging, maintaining deployment resources,
+observability, logging.</li>
+<li>Investigating and documenting best practice policies and procedures that
+ensure consistent DevOps behaviours.</li>
+</ul>
+<h2 id="todays-complex-environments">Today&rsquo;s Complex Environments<a class="anchor" href="#todays-complex-environments">#</a></h2>
+<p>It is well known that the complexity and configurability of today’s
+environments can require many hours of research and experimentation in order to
+achieve a minimum viable deployment. From the deceptively simple task of
+building a lightweight, secure, and robust, image, to the more advanced stages
+of operations, such as pod scaling and monitoring, the knowledge required to
+excel in this landscape is vast.</p>
+<p>Teams often have little time for researching solutions to a particular
+operational problem, and rightly so. A team should be focused on the
+development and stabilization of features for their application in order to
+provide business value as quickly as possible. What often transpires as a
+result of having no pre-set standard and a tight application-centric focus is a
+number of different, sometimes divergent, solutions to the same problem. This
+can make it very difficult to achieve a consistent standard in operations
+across the platform.</p>
+<p>As an example, take the simple case of documentation. It could be expected that
+combining documentation from multiple projects into a single place, with a
+consistent look and feel, would be rather straightforward to achieve. Yet the
+variety of tooling utilized across the ecosystem has resulted in a non-trivial
+effort, consisting of converters and other scripts to try to reach a singular
+portal for documentation.</p>
+<h2 id="curated-toolchains-for-everyone">Curated Toolchains for Everyone<a class="anchor" href="#curated-toolchains-for-everyone">#</a></h2>
+<p>The DevProd team works to centralise the effort of evaluating and curating the
+toolchain for developing and operating applications on the Clouddot platform.
+As they operate as a team outside of any one application, the DevProd team can
+take a wider view of the requirements and offer solutions that will provide the
+biggest net benefit to the entire platform.</p>
+<p>The end result may not necessarily be the most optimal solution for each
+individual team, but keeping an approach consistent across the platform at the
+cost of, for example, a 5% performance degradation is definitely something to
+be taken seriously.</p>
+<h2 id="codifying-the-operational-logic">Codifying the Operational Logic<a class="anchor" href="#codifying-the-operational-logic">#</a></h2>
+<p>Whilst these best practices and tools can be provided to developers as
+documents and scripts, the onus is then once again on the developers to
+understand and adopt them. This consumes already precious resources and is open
+to errors resulting from mistakes during input, misinterpretations of
+specifications and intentional or unintentional non-compliance.</p>
+<p>The DevProd team chose to minimise this risk with Clowder. By codifying these
+practices into an operator and promoting convention over configuration, Clowder
+can automatically configure applications to align with best practice and
+standards, while at the same time reducing the developer knowledge necessary to
+maintain an optimal environment.</p>
+<h2 id="operational-benefits">Operational Benefits<a class="anchor" href="#operational-benefits">#</a></h2>
+<p>The benefits Clowder brings, also extend to the front line support teams
+dealing with operations. These teams traditionally spend a portion of them time
+orienting themselves to each app they are called to work on. This process is
+time consuming and can also lead to incorrect assumptions being made around
+configuration or process flow.</p>
+<p>With the responsibility of building and deploying kubernetes resources
+delegated to Clowder, certain variables that were previously left up to
+personal preference, for example, service port numbers, can be assumed
+consistently for every single application, eliminating costly ambiguity when
+operations teams are trying to understand an application’s entrypoints.</p>
+<p>Clowder gives operations teams a single point of entry to understand an
+application, with all relevant information contained in a single document.
+Knowledge gained understanding one app is directly transferable to another,
+decreasing problem investigation time, and increasing platform operational
+awareness.</p>
+<p>As both operations and developers gain an understanding of Clowder and the
+deployment models used, there is also a shared language they can use to
+describe an apps operation, fostering tighter cohesion between the two.</p>
+<h2 id="insulation-from-environmental-and-requirement-changes">Insulation from Environmental and Requirement Changes<a class="anchor" href="#insulation-from-environmental-and-requirement-changes">#</a></h2>
+<p>By reducing developers’ interactions with environments to a single
+configuration document and letting Clowder deploy and configure their
+applications and prerequisite services, developers are automatically insulated
+from the changes that occur in ever evolving operational environments. These
+changes will instead be implemented inside Clowder and automatically applied at
+the correct time.</p>
+<p>As an example the arduous task of complying with FedRAMP specifications could
+well be reduced by say 30% by having an application be managed by Clowder.
+Since Clowder can ensure that certain requirements of FedRAMP are implicitly
+met, developer teams are left with a reduced workload. As and when these
+requirements are reviewed and updated, Clowder can be modified to reflect those
+changes, completely insulating the development teams from any further effort.</p>
+<p>As the number of these changes continues to grow, with the advent of
+requirements like service meshes, scalability, and canary deployments,
+developers onboarding to Clowder will be able to reduce time spent on
+researching configuration resources and instead spend more time delivering
+business value by leveraging the reasonable default configurations that Clowder
+provides.</p>
+<p>Read more about Clowder <a href="https://clowder-operator.readthedocs.io/en/latest/index.html" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>here</a>
+</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://redhatinsights.github.io/blog/devprod-update-2021-02-02/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">DevProd team update for week of February 1</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Twitter"
+         href="https://twitter.com/redhat"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/RedHatInsights"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://redhatinsights.github.io/svg/github.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
