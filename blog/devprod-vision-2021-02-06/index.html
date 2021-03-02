@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>Developer Productivity Team - Core Vision | Clouddot Platform Blog</title>
+  <title>DevProd Team - Core Vision: Clowder | Clouddot Platform Blog</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Developer Productivity Team - Core Vision" />
+  <meta name="twitter:title" content="DevProd Team - Core Vision: Clowder" />
   <meta name="twitter:description" content=""/>
   <meta name="twitter:site" content="https://twitter.com/redhat" />
   <meta name="twitter:creator" content="https://twitter.com/redhat" />
@@ -55,8 +55,8 @@
             "@id": "https:\/\/redhatinsights.github.io\/"
       },
       "articleSection" : "blog",
-      "name" : "Developer Productivity Team - Core Vision",
-      "headline" : "Developer Productivity Team - Core Vision",
+      "name" : "DevProd Team - Core Vision: Clowder",
+      "headline" : "DevProd Team - Core Vision: Clowder",
       "description" : "",
       "inLanguage" : "en-US",
       "author" : "",
@@ -68,7 +68,7 @@
       "datePublished": "2021-02-18 10:00:00 -0600 CST",
       "dateModified" : "2021-02-18 10:00:00 -0600 CST",
       "url" : "https:\/\/redhatinsights.github.io\/blog\/devprod-vision-2021-02-06\/",
-      "wordCount" : "1076",
+      "wordCount" : "1175",
       "keywords" : ["Blog"]
     }
   
@@ -110,33 +110,42 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Developer Productivity Team - Core Vision</h1>
+            <h1 id="post__title">DevProd Team - Core Vision: Clowder</h1>
             <time datetime="2021-02-18 10:00:00 -0600 CST" class="post__date">18 Feb 2021</time> 
           </header>
           <article class="post__content">
               
-<p>It’s important in a large ecosystem such as the Clouddot platform to understand
-all the moving parts, the teams involved, and their functions and driving
-forces. This can often help alleviate stresses and tensions by providing the
-context to teams decisions, ultimately revealing their core motiviations. In
-this blog post, the intention is to furnish the reader with an overview of the
-pillars that the Developer Productivity (DevProd) team is built on and how some
-of the projects they maintain and operate fit into the broader Clouddot
-ecosystem.</p>
-<p>The DevProd team’s chief concern is to improve developer productivity by
-accelerating the delivery of features and business value. There are multiple
-facets to this, but broadly speaking the DevProd team focuses on three major
-areas:</p>
+<p>This is the first in a series of posts that will explain the strategic goals of
+the Clouddot DevProd team, their key responsiblities, and how those
+responsibilities fit into their strategic goals.  This post will focus on the
+rationale behind the creation of Clowder.</p>
+<h2 id="strategic-goals">Strategic Goals<a class="anchor" href="#strategic-goals">#</a></h2>
+<p>The DevProd team&rsquo;s chief concern is to improve developer productivity by
+focusing on two strategic goals:</p>
 <ul>
-<li>Reducing the steep learning curve developers navigate when <strong>onboarding</strong> to
-the platform, e.g. learning Istio service mesh configuration, or
-understanding pod affinity rules.</li>
-<li>Improving developers' <strong>experience</strong> of operating inside a kubernetes-based
-platform such as Clouddot, e.g. debugging, maintaining deployment resources,
-observability, logging.</li>
-<li>Investigating and documenting best practice policies and procedures that
-ensure <strong>scalability</strong> and consistency DevOps behaviours.</li>
+<li><strong>Experience</strong>:  Improving developers' experience of operating inside a
+kubernetes-based platform such as Clouddot, e.g. debugging, maintaining
+deployment resources, observability, logging.</li>
+<li><strong>Scalability</strong>:  Investigating and documenting best practices and
+procedures that ensure consistent DevOps behaviours.  Also includes
+<em>automating</em> as much of these best practices as possible.</li>
 </ul>
+<p>These goals are closely related but are worth calling out separately.
+Scalability <em>could</em> roll up under developer experience: a more scalable
+organization implies that it takes less effort to get the same amount of work
+done, which would be consdiered a better experience.  But it&rsquo;s worth calling
+out scalability because it&rsquo;s such a key strategy to achieving a better
+developer experience, particularly as the Clouddot platform continues to
+rapidly grow.</p>
+<p>Also, scalability is just decsribing productivity from a solution-based
+perspective: a solution is considered scalable if it makes the individuals in
+the organization more productive (which leads to a better overall experience).</p>
+<p>Lastly, developers' productivity is of course a measurement of <em>time</em>.  How
+long does it take for a developer to e.g. onboard a new app onto the Clouddot
+platform, push a changeset to production, or integrate Redis into their
+app?  What Clowder automates saves signifcant time for both developers and SRE.</p>
+<p>There is a lot of room to improve Clouddot&rsquo;s experience and scalability, and
+Clowder is a key component in moving that experience forward.</p>
 <h2 id="todays-complex-environments">Today&rsquo;s Complex Environments<a class="anchor" href="#todays-complex-environments">#</a></h2>
 <p>It is well known that the complexity and configurability of today’s
 environments can require many hours of research and experimentation in order to
@@ -167,8 +176,7 @@ requirements and offer solutions that will provide the biggest net benefit to
 the entire platform.</p>
 <p>The end result may not necessarily be the most optimal solution for each
 individual team, but keeping an approach consistent across the platform at the
-cost of e.g. a 5% performance degradation is definitely something to be taken
-seriously.</p>
+cost of e.g. a 5% performance is usually worth the added scalability.</p>
 <h2 id="codifying-the-operational-logic">Codifying the Operational Logic<a class="anchor" href="#codifying-the-operational-logic">#</a></h2>
 <p>Whilst these best practices and tools can be provided to developers as
 documents and scripts, the onus is then once again on the developers to
@@ -181,12 +189,12 @@ can automatically configure applications to align with best practices and
 standards, while at the same time reducing the developer knowledge necessary to
 maintain an optimal environment.</p>
 <h2 id="operational-benefits">Operational Benefits<a class="anchor" href="#operational-benefits">#</a></h2>
-<p>The benefits Clowder brings also extend to the front line support teams (i.e.
-SRE) dealing with operations. These teams traditionally spend a portion of
-their time orienting themselves to each app they are responsible for. This
-process is time consuming and leaves room for human error, potentiallly leading
-to incorrect assumptions being made about application configuration or process
-flow.</p>
+<p>The scalability benefits Clowder brings also extend to the front line support
+teams (i.e.  SRE) dealing with operations. These teams traditionally spend a
+portion of their time orienting themselves to each app they are responsible
+for. This process is time consuming and leaves room for human error,
+potentiallly leading to incorrect assumptions being made about application
+configuration or process flow.</p>
 <p>With the responsibility of building and deploying Kubernetes resources
 delegated to Clowder, certain variables that were previously left up to
 personal preference, for example service port numbers, can be assumed for every

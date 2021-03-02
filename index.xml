@@ -9,12 +9,14 @@
     <copyright>© {year}</copyright>
     <lastBuildDate>Thu, 18 Feb 2021 10:00:00 -0600</lastBuildDate><atom:link href="https://redhatinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Developer Productivity Team - Core Vision</title>
+      <title>DevProd Team - Core Vision: Clowder</title>
       <link>https://redhatinsights.github.io/blog/devprod-vision-2021-02-06/</link>
       <pubDate>Thu, 18 Feb 2021 10:00:00 -0600</pubDate>
       
       <guid>https://redhatinsights.github.io/blog/devprod-vision-2021-02-06/</guid>
-      <description>It’s important in a large ecosystem such as the Clouddot platform to understand all the moving parts, the teams involved, and their functions and driving forces. This can often help alleviate stresses and tensions by providing the context to teams decisions, ultimately revealing their core motiviations. In this blog post, the intention is to furnish the reader with an overview of the pillars that the Developer Productivity (DevProd) team is built on and how some of the projects they maintain and operate fit into the broader Clouddot ecosystem.</description>
+      <description>This is the first in a series of posts that will explain the strategic goals of the Clouddot DevProd team, their key responsiblities, and how those responsibilities fit into their strategic goals. This post will focus on the rationale behind the creation of Clowder.
+Strategic Goals The DevProd team&amp;rsquo;s chief concern is to improve developer productivity by focusing on two strategic goals:
+ Experience: Improving developers&#39; experience of operating inside a kubernetes-based platform such as Clouddot, e.</description>
     </item>
     
     <item>
