@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 10:00:00 -0600</lastBuildDate><atom:link href="https://redhatinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 15:00:00 -0600</lastBuildDate><atom:link href="https://redhatinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevProd team update for week of April 7</title>
+      <link>https://redhatinsights.github.io/blog/devprod-update-2021-04-07/</link>
+      <pubDate>Tue, 06 Apr 2021 15:00:00 -0600</pubDate>
+      
+      <guid>https://redhatinsights.github.io/blog/devprod-update-2021-04-07/</guid>
+      <description>Clowder Job Support Clowder now supports Jobs! The usage doc can be found as part of the Clowder docs .
+There are still features in flight for full support of IQE Jobs, but most other usecases should be covered. The DevProd team is working to close the IQE gaps, so stay tuned in the coming weeks. Feedback is always welcome and appreciated.
+Managed Kafka Support The initial work to enable Managed Kafka support is underway.</description>
+    </item>
+    
     <item>
       <title>DevProd Team - Core Vision: Clowder</title>
       <link>https://redhatinsights.github.io/blog/devprod-vision-2021-02-06/</link>
