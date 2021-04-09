@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Tue, 06 Apr 2021 15:00:00 -0600</lastBuildDate><atom:link href="https://redhatinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 08:00:00 -0500</lastBuildDate><atom:link href="https://redhatinsights.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continuous Delivery and Feature Flags</title>
+      <link>https://redhatinsights.github.io/blog/continuous-delivery-and-feature-flags/</link>
+      <pubDate>Fri, 09 Apr 2021 08:00:00 -0500</pubDate>
+      
+      <guid>https://redhatinsights.github.io/blog/continuous-delivery-and-feature-flags/</guid>
+      <description>Our current branching model includes two branches &amp;ndash; master and stable. This allows changes not ready for production to sit on master while hotfixes can be cherry picked onto stable. While this is intuitive to understand as a developer, it is more complex when implemented in a deploy pipeline. Two sets of build artifacts are needed at any given moment, and there is always an extra cherry-pick step required to get anything to produciton.</description>
+    </item>
+    
     <item>
       <title>DevProd team update for week of April 7</title>
       <link>https://redhatinsights.github.io/blog/devprod-update-2021-04-07/</link>
